@@ -34,3 +34,25 @@
 .to-pay-for {
   width: 100%;
 }
+.how-much-we-payFor {
+  position: relative;
+  height: 70rpx;
+}
+ .removeGoods {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 8rpx;
+} 
+.how-much-box {
+  width: 200rpx;
+  position: absolute;
+  right: 200rpx;
+}
+.pay-for {
+  width: 200rpx;
+  position: absolute;
+  right: 0rpx;
+  background: red;
+  color: #fff;
+}

@@ -13,16 +13,22 @@
       <view class='cart-footer'>
         <view class="weui-cells weui-cells_after-title to-pay-for">
           <checkbox-group bindchange="checkboxChange">
-            <label class="weui-cell weui-check__label">
-            <checkbox class="weui-check" value="{{item.value}}" checked='{{item.checked}}'></checkbox>
-              <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
-                <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
-              </view>
-              <view class="weui-cell__bd">
-                <text>随便写点东西</text>
-              </view>
-            </label>
+              <label class="weui-cell weui-check__label" wx:for="{{checkboxItems}}" wx:key="value">
+                  <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                  <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                      <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                      <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                  </view>
+                  <view class="weui-cell__bd how-much-we-payFor">
+                    <image class='removeGoods' src='../../icon/iconDelate.png'></image>
+                     <view class='how-much-box'>
+                      <view>合计：<text>${{}}</text></view>
+                      <view>不含运费</view>
+                    </view>
+                    <view class='pay-for'>结算（{{goodsNum}}）</view> 
+                  </view>
+              </label>
           </checkbox-group>
         </view>
       </view>

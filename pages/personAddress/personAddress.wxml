@@ -6,7 +6,6 @@
     <navigator url="../addAddress/addAddress"><text class='go-to-add-adderss'>马上去添加地址</text></navigator>
   </view>
   <view wx:else>
-    
     <view wx:for="{{addressAry}}" wx:key="index">
       <!-- <view class='address-list'>
         <view>
@@ -26,9 +25,9 @@
           <view class="placeholder"><image src='../../icon/iconDelate.png' bindtap='delateAddress'></image></view>
         </view>
       </view>
-  </view>
-  </view>
-  <view class="weui-btn-area">
-    <button class="weui-btn" type="warn" bindtap="addAddress">添加地址</button>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="warn" bindtap="addAddress">添加地址</button>
+    </view>
   </view>
 </view>
