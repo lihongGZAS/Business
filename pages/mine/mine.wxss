@@ -1,0 +1,92 @@
+/* pages/mine/mine.wxss */
+.picBox1 {
+  width: 100%;
+  height: 600rpx;
+  position: relative;
+}
+.userPicBox1 {
+  width: 330rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.page_hd {
+  background: #66c;
+}
+.picBox {
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.userPicBox {
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user-pictrue {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: block;
+  overflow: hidden
+}
+.user-nickName {
+  width: 100%;
+  text-align: center;
+}
+
+/* 订单栏目  */
+.detail-footer {
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  border-bottom: 4rpx solid #ccc;
+  box-sizing: border-box;
+}
+.detail-list{
+  width: 25%;
+  height: 100rpx;
+  font-size: 14px;
+  text-align: center;
+}
+.detail-list-iconBox {
+  margin-top: 10rpx;
+}
+.detail-list-icon {
+  width: 20px;
+  height: 20px;
+}
+.detail-list-text {
+  margin-top: -12rpx;
+  color: #8a8a8a;
+  font-size: 10px;
+}
+/* end  */
+
+.my-shop-cart-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+/* 加载框  */
+.loading-data-box {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  background: #8a8a8a;
+  color: #fff;
+  position: fixed;
+  top: 380rpx;
+  left: 275rpx;
+  z-index: 999;
+}

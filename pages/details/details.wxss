@@ -1,0 +1,112 @@
+/* pages/details/details.wxss */
+.detail-outerBox {
+  background: #e6e6e6;
+  position: relative;
+}
+.detail-content {
+  position: relative;
+  z-index: 10;
+}
+.detail-footer {
+  width: 100%;
+  height: 100rpx;
+  background: #e6e6e6;
+  position:fixed;
+  bottom: 0rpx;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.detail-list{
+  width: 20%;
+  height: 100rpx;
+  border: 1rpx solid #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+swiper{
+  width: 100%;
+  height: 600rpx;
+  box-sizing: border-box;
+}
+swiper image {
+  height: 100%;
+  width: 100%;
+}
+.business-info0 {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.business-info {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+  box-sizing: border-box;
+  
+}
+.detail-list-iconBox {
+  margin-top: 10rpx;
+}
+.detail-list-icon {
+  width: 20px;
+  height: 20px;
+}
+.detail-list-text {
+  margin-top: -12rpx;
+  color: #8a8a8a;
+  font-size: 10px;
+}
+.detail-list-diff{
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 0;
+}
+.detail-list-text0 {
+  color: #fff;
+  background: #f57c2b;
+}
+.detail-list-text1 {
+  color: #fff;
+  background: red;
+}
+.loading-data-box {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  background: #8a8a8a;
+  color: #fff;
+  position: fixed;
+  top: 380rpx;
+  left: 275rpx;
+  z-index: 999;
+}
+.weui-tab__content{
+  width: 100%;
+  height: 400rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.weui-tab__content image {
+  width: 100%;
+  height: 100%;
+}
+.business-list-desc {
+  color: red;
+  font-size: 32rpx;
+}
+.business-list-price {
+  color: red;
+}
+.business-list-price-fh {
+  font-size: 26rpx;
+  color: red;
+}
+.business-list-old-price {
+  font-size: 28rpx;
+  color: #555;
+  text-decoration: line-through;
+}

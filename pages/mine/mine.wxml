@@ -1,0 +1,100 @@
+<!--pages/mine/mine.wxml-->
+<view class='page'>
+  <view wx:if="{{userInfoData === ''}}">
+    <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+    <view class='picBox1'>
+      <view class='userPicBox1'>
+        <open-data type="userAvatarUrl"></open-data>  
+      </view>
+    </view>
+
+    <!-- <open-data type="userNickName"></open-data> -->
+    <!-- 需要使用 button 来授权登录 -->
+    <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="weui-btn" type="primary">
+    授权登录</button>
+    <view wx:else>*请升级微信到最新版本</view>
+  </view>
+  <view wx:else>
+  <view class='page_hd'>
+    <!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+    <view wx:if="{{canIUse}}">
+      <view class='picBox'>
+        <view class='userPicBox'>
+          <open-data type="userAvatarUrl" class="user-pictrue"></open-data>  
+        </view>
+      </view>
+      <view class='user-nickName'>
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <!-- <view class='loading-data-box' wx:else>
+      <view class="weui-loadmore">
+          <view class="weui-loading"></view>
+          <view class="weui-loadmore__tips">loading...</view>
+      </view>
+    </view> -->
+  </view>
+  <view class='page_bd'>
+    <view class='indent-box'>
+      <view class='detail-footer'>
+        <view class='detail-list'>
+          <view class='detail-list-iconBox'>
+            <image class='detail-list-icon' src='../../icon/iconPay.png'>
+          </image></view>
+          <view class='detail-list-text'>待支付</view>
+        </view>
+        <view class='detail-list'>
+          <view class='detail-list-iconBox'>
+            <image class='detail-list-icon' src='../../icon/iconShouH.png'>
+          </image></view>
+          <view class='detail-list-text'>待收货</view>
+        </view>
+        <view class='detail-list'>
+          <view class='detail-list-iconBox'>
+            <image class='detail-list-icon' src='../../icon/iconFinshed.png'>
+          </image></view>
+          <view class='detail-list-text'>已完成</view>
+        </view>
+        <view class='detail-list'>
+          <view class='detail-list-iconBox'>
+            <image class='detail-list-icon' src='../../icon/iconAllIndent.png'>
+          </image></view>
+          <view class='detail-list-text'>全部订单</view>
+        </view>
+      </view>
+    </view>
+    <view class='my-shop-cart'>
+      <view class="weui-cells weui-cells_show">
+        <navigator class="weui-cell weui-cell_access" url="../personInfo/personInfo">
+          <view class="weui-cell__bd">
+            <image src='../../icon/iconPersonerInfo.png' class='my-shop-cart-icon'></image>
+            <text>个人资料</text>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" url="../personAddress/personAddress">
+          <view class="weui-cell__bd">
+            <image src='../../icon/iconSHAddress.png' class='my-shop-cart-icon'></image>
+            <text>收货地址</text>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" url="../collection/collection">
+          <view class="weui-cell__bd">
+            <image src='../../icon/iconShopClt.png' class='my-shop-cart-icon'></image>
+            <text>商品收藏</text>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator class="weui-cell weui-cell_access" url="../bindPhoneNumber/bindPhoneNumber">
+          <view class="weui-cell__bd">
+            <image src='../../icon/iconBDIphone.png' class='my-shop-cart-icon'></image>
+            <text>绑定手机</text>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

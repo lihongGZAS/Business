@@ -1,0 +1,34 @@
+<!--pages/personAddress/personAddress.wxml-->
+<view class='page'>
+  <view wx:if="{{addressAry.length === 0}}" class='add-address'>
+    <view><image src='../../icon/iconAddress.png'></image></view>
+    <view><text>想把你的宝贝寄到哪去</text></view>
+    <navigator url="../addAddress/addAddress"><text class='go-to-add-adderss'>马上去添加地址</text></navigator>
+  </view>
+  <view wx:else>
+    
+    <view wx:for="{{addressAry}}" wx:key="index">
+      <!-- <view class='address-list'>
+        <view>
+          <text>{{item.userName}}</text><text>{{item.userPhoneNum}}</text>
+        </view>
+      </view> -->
+      <view class="weui-flex address-list">
+        <view class="weui-flex__item address-list-left">
+          <view class="placeholder"><text class='user-name-text'>{{item.userName}}</text><text>{{item.userPhoneNum}}</text></view>
+          <view class="placeholder user-detail-address">
+            <text class='common-address' wx:if="{{item.commonAddress}}">默认</text>
+            <text>{{item.region[0]+item.region[1]+item.region[2]}}</text><text>{{item.userDetailAddress}}</text>
+          </view>
+        </view>
+        <view class='address-list-right'>
+          <view class="placeholder"><image src='../../icon/iconChange.png' bindtap='changeAddress'></image></view>
+          <view class="placeholder"><image src='../../icon/iconDelate.png' bindtap='delateAddress'></image></view>
+        </view>
+      </view>
+  </view>
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" type="warn" bindtap="addAddress">添加地址</button>
+  </view>
+</view>

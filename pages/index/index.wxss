@@ -1,0 +1,37 @@
+/**index.wxss**/
+page {
+  height: 100%;
+}
+swiper {
+  height: 400rpx;
+}
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+.show-local-img {
+  border: 1px solid red;
+  width: 100%;
+}
+.show-local-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.recommondDiv {
+  width: 100%;
+}
+.recommond-text {
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #AB956D;
+}
+.recommondImg {
+  position: relative; 
+}
+.recommondImg image {
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+}

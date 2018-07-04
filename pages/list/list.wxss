@@ -1,0 +1,38 @@
+/* pages/list/list.wxss */
+page, .business-list {
+  height: 100%;
+  overflow: hidden;
+}
+.categroy-left {
+  height: 100%;
+  width: 24%;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+  float: left;
+}
+.cate-list {
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  border-left: 3px solid #fff;
+}
+.categroy-left .cate-list.on{
+    color: #AB956D;
+    border-color: #AB956D;
+}
+
+.categroy-right {
+  height: 100%;
+  width: 76%;
+  float: right;
+  overflow-y: scroll;
+}
+.business-pic-list {
+  height: 180rpx;
+  width: 180rpx;
+}
+.business-desc-list {
+  width: 330rpx;
+  height: 180rpx;
+  right: 20rpx;
+}

@@ -1,0 +1,89 @@
+<!--pages/details/details.wxml-->
+<view class='detail-outerBox'>
+  <view class='detail-content'>
+    <scroll-view>
+      <view class='swiper-box' >
+        <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{businessData}}" wx:key="id">
+            <swiper-item>
+              <image src="{{item.imgUrl}}" class="slide-image"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view>
+        <view wx:if='{{businessData.lenght === 0 }}' class='business-info0'>￥</view>
+        <view wx:else class='business-info'>
+          <view>{{businessData[0].name}}</view>
+          <view class='business-list-desc'>{{businessData[0].desc}}</view>
+          <view class='business-list-price'>
+            <text class='business-list-price-fh'>￥</text>{{businessData[0].newPrice}}
+            <text class='business-list-old-price'>￥{{businessData[0].oldPrice}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='business-detail-box'>
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <image src='{{businessData[0].imgUrl}}'></image>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <view>重量：350g</view>
+                  <view>原材料：巧克力、奶油、甜糕</view>
+                  <view>卡路里：240千焦</view>
+                  <view>保质期：低温通风环境5天</view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                  <view>生产日期：2018-06-28</view>
+                  <view>生产厂商：美食之家</view>
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                  <view>联系人：secret Angel</view>
+                  <view>联系方式：5201314</view>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view style='height: 104rpx;'></view>
+    </scroll-view>
+  </view>
+  <view class='detail-footer'>
+    <view class='detail-list'>
+      <view class='detail-list-iconBox'>
+        <image class='detail-list-icon' src='../../icon/iconMsg.png'>
+      </image></view>
+      <view class='detail-list-text'>客服</view>
+    </view>
+    <view class='detail-list'>
+      <view class='detail-list-iconBox'>
+        <image class='detail-list-icon' src='../../icon/iconCollect.png'>
+      </image></view>
+      <view class='detail-list-text'>收藏</view>
+    </view>
+    <view class='detail-list'>
+      <view class='detail-list-iconBox'>
+        <image class='detail-list-icon' src='../../icon/iconCart.png'>
+      </image></view>
+      <view class='detail-list-text'>购物车</view>
+    </view>
+    <view class='detail-list detail-list-text0 detail-list-diff'>立即购买</view>
+    <view class='detail-list detail-list-text1 detail-list-diff'>加入购物车</view>
+  </view>
+</view>
+<view class='loading-data-box' wx:if='{{businessData.length===0}}'>
+  <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">loading...</view>
+  </view>
+</view>
+  

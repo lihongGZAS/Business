@@ -1,0 +1,54 @@
+<!--pages/changeAddress/changeAddress.wxml-->
+<view class='page'>
+  <view class='page_bd'>    
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">收件人</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{addressAry[0].userName}}' bindinput='getUserName'></input>
+        </view>
+        <!-- <view class="weui-cell__ft"><icon color="#E64340" size="23" type="warn"></icon></view> -->
+      </view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">省/市/区</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="region" value="{{region}}" bindchange="bindRegionChange">
+            <view class="weui-select weui-select_in-select-after over-text">{{region}}</view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">详细地址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input over-text" value='{{addressAry[0].userDetailAddress}}' bindinput='getUserDetailAddress'></input>
+        </view>
+        <!-- <view class="weui-cell__ft"><icon color="#E64340" size="23" type="warn"></icon></view> -->
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">电话号码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value='{{addressAry[0].userPhoneNum}}' bindinput='getUserPhoneNum'></input>
+        </view>
+        <!-- <view class="weui-cell__ft"><icon color="#E64340" size="23" type="warn"></icon></view> -->
+      </view>
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">常用地址</view>
+        <view class="weui-cell__ft">
+          <switch checked="{{addressAry[0].commonAddress}}" bindchange="switchChange"></switch>
+        </view>
+      </view>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" bindtap="saveAddress">保存</button>
+    </view>
+  </view>
+</view>
+

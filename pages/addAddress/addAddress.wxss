@@ -1,0 +1,6 @@
+/* pages/addAddress/addAddress.wxss */
+.over-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

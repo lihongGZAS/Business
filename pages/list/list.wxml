@@ -1,0 +1,45 @@
+<!--pages/list/list.wxml-->
+<view class='business-list'>
+  <view class='categroy-left'>
+    <view class="cate-list {{curIndex === index?'on':''}}" wx:for="{{categroy}}" wx:key="item.id" data-index='{{index}}' data-id='{{item.id}}' bindtap='switchTab'>{{item.name}}
+    </view>
+  </view>
+  <view class='categroy-right'>
+    <view class='businessBox' wx:for="{{iceCream}}" wx:key='id'>
+      <navigator url='../details/details'>
+        <view class='business-pic business-pic-list'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view><text>{{item.name}}</text></view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'><text>￥</text>{{item.price}}</view>
+        </view>
+      </navigator> 
+    </view>
+    <view class='businessBox' wx:for="{{iceCream}}" wx:key='id'>
+      <navigator url='../details/details'>
+        <view class='business-pic business-pic-list'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view><text>{{item.name}}</text></view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'><text>￥</text>{{item.price}}</view>
+        </view>
+      </navigator> 
+    </view>
+    <view class='businessBox' wx:for="{{iceCream}}" wx:key='id'>
+      <navigator url='../details/details'>
+        <view class='business-pic business-pic-list'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>
+        <view class='business-desc business-desc-list'>
+          <view><text>{{item.name}}</text></view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'><text>￥</text>{{item.price}}</view>
+        </view>
+      </navigator> 
+    </view>
+  </view>
+</view>

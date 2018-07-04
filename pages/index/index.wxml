@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<scroll-view scroll-y style='height: 100%'>
+  <view class='swiper-box'>
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="id">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='recommondDiv'>
+    <view class='recommond-text'><text>--精品推荐--</text></view>
+    <view class='recommondImg'> 
+      <navigator url='../details/details'><image src='{{recommondPic1}}'></image></navigator>
+      <navigator url='../details/details'><image src='{{recommondPic2}}'></image></navigator>
+    </view> 
+  </view>
+  <view>
+    <view class='recommond-text'><text>精美甜品</text></view>
+    
+      <view class='businessBox' wx:for="{{businessData}}" wx:key='id'>
+      <navigator url='../details/details'>
+        <view class='business-pic'>
+          <image src='{{item.url}}'></image>
+        </view>
+        <view class='business-desc'>
+          <view><text>{{item.name}}</text></view>
+          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+          <view class='business-price'><text>￥</text>{{item.price}}</view>
+        </view>
+        </navigator>
+      </view>
+    
+  </view>
+</scroll-view>

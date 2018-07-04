@@ -1,0 +1,13 @@
+<!--pages/collection/collection.wxml-->
+<view class='page'>
+  <view class='page_bd'>
+    <view wx:if="{{collectionAry.length === 0}}" class='add-address'>
+      <view><image src='../../icon/iconNothing1.png'></image></view>
+      <view><text class='no-collection'>什么都没有</text></view>
+      <view bindtap='goToList'><text class='go-to-add-adderss'>马上去选几件中意的商品</text></view>
+    </view>
+    <view wx:else>
+      <!-- 如果有收藏则展示出来  -->
+    </view>
+  </view>
+</view>

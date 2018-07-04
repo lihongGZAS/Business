@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/mine/mine",
+    "pages/cart/cart",
+    "pages/details/details",
+    "pages/personInfo/personInfo",
+    "pages/personAddress/personAddress",
+    "pages/addAddress/addAddress",
+    "pages/changeAddress/changeAddress",
+    "pages/bindPhoneNumber/bindPhoneNumber",
+    "pages/collection/collection"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#AB956D",
+    "navigationBarTitleText": "甜点商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icon/iconIndex.png",
+        "selectedIconPath": "icon/iconIndex1.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "分类",
+        "iconPath": "icon/iconKinds.png",
+        "selectedIconPath": "icon/iconKinds1.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icon/iconCart.png",
+        "selectedIconPath": "icon/iconCart1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icon/iconMine.png",
+        "selectedIconPath": "icon/iconMine1.png"
+      }
+    ]
+  }
+}

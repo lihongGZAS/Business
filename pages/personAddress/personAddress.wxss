@@ -1,0 +1,49 @@
+/* pages/personAddress/personAddress.wxss */
+.add-address {
+  width: 400rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.add-address image {
+  width: 64rpx;
+  height: 64rpx;
+}
+.go-to-add-adderss {
+  color: red;
+}
+.address-list {
+  width: 100%;
+  border-bottom: 2rpx solid #8a8a8a;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.address-list-left {
+  border-right: 2rpx solid #8a8a8a;
+  padding-right: 80rpx;
+}
+.user-name-text {
+  margin-right: 30rpx;
+}
+.common-address {
+  color: #fff;
+  background: red;
+  border-radius: 8rpx;
+  padding: 4rpx;
+}
+.user-detail-address {
+  color: #ccc;
+  font-size: 30rpx;
+}
+
+.address-list-right {
+  width: 140rpx;
+}
+.address-list-right image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 40rpx;
+}
