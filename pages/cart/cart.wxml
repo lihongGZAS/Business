@@ -20,7 +20,7 @@
                 <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
               </view>
               <view class="weui-cell__bd">
-                <image></image>
+                <text>随便写点东西</text>
               </view>
             </label>
           </checkbox-group>

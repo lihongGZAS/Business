@@ -13,7 +13,7 @@ Page({
       {name: 'jack', id: 11235}
     ],
     checkboxItems: [
-      { name: 'standard is dealt for u.', value: '0'}
+      { name: 'standard is dealt for u.', value: '0', checked: true}
     ],
   },
 
