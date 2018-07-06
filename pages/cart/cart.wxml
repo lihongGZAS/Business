@@ -31,33 +31,6 @@
               </view>
           </label>
       </checkbox-group>
-      <!-- <view wx:for="{{cartAry}}" wx:key="index"  class='cart-goods-list'> 
-        <view class='jiesuan-box'>
-          <view class='checkbox-group-box goods-checkbox-list'>
-            <checkbox-group class="goods-checkbox-group" bindchange="checkboxChange">
-              <label class="weui-cell weui-check__label checkbox-group-label" wx:for="{{checkboxItems}}" wx:key="value">
-                <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
-                <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                  <icon class="weui-icon-checkbox_circle checkbox-icon-list" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
-                  <icon class="weui-icon-checkbox_success checkbox-icon-list" type="success" size="23" wx:if="{{item.checked}}"  color='red'></icon>
-                </view>
-              </label>
-            </checkbox-group>
-          </view>
-          <view class='goods-images-box'><image src='{{item.imgUrl}}'></image></view>
-          <view class='goods-detail-box'>
-            <view class='goods-name-text'>{{item.name}}</view>
-            <view class='goods-price-number'>
-              <view class='goods-price-style'>￥<text>{{item.price}}</text></view>
-              <view class='goods-number-style'>
-                <text class='reduce-goods-num' bindtap='reduceNum'>-</text>
-                <text class='now-goods-num'>{{item.goodsNum}}</text>
-                <text class='add-goods-num' bindtap='addNum'>+</text>
-              </view>
-            </view>
-          </view>
-        </view>
-      </view> -->
     </scroll-view>  
     <view class='tianchong'></view>
     <view class='cart-footer'>
@@ -80,7 +53,7 @@
           <view class='pay-for-list'>合计：<text>￥{{goodsValue}}</text></view>
           <view class='pay-for-list'>不含运费</view>
         </view>
-        <view class='pay-for-btn'>结算（{{goodsNum}}）</view>
+        <view class='pay-for-btn'>结算（{{goodsNums}}）</view>
       </view>
     </view>
   </view>
