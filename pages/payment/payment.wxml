@@ -1,0 +1,14 @@
+<!--pages/payment/payment.wxml-->
+<view class='page'>
+  <view class='page_hd'>
+    <view class='user-address-detail'>
+      <view class='my-address'>
+        <image class='user-recive-address' src='../../icon/iconSHAddress.png'></image>
+        <text>你还没有收货地址</text><text class='add-person-address'>马上添加</text>
+      </view>
+    </view>
+  </view>
+  <view class='page_bd'>
+    <text>选购的商品信息</text>
+  </view>
+</view>

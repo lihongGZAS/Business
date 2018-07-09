@@ -1,0 +1,23 @@
+/* pages/payment/payment.wxss */
+.user-address-detail {
+  height: 120rpx;
+  border: 1px solid red;
+}
+.my-address {
+  height: 100%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 120rpx;
+}
+.user-recive-address {
+  width: 48rpx;
+  height: 48rpx;
+  display: inline-block;
+  margin-top: 10rpx;
+  margin-bottom: -6rpx;
+}
+
+.add-person-address {
+  color: red;
+  margin-left: 20rpx;
+}

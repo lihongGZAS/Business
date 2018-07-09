@@ -6,16 +6,19 @@
   </view>
   <view class='categroy-right'>
     <view class='businessBox' wx:for="{{iceCream}}" wx:key='id'>
-      <navigator url='../details/details'>
-        <view class='business-pic business-pic-list'>
+      <view class='business-pic business-pic-list'>
+        <navigator class='detail-navigator' url='../details/details'>
           <image src='{{item.imgUrl}}'></image>
+        </navigator>
+      </view>
+      <view class='business-desc business-desc-list'>
+        <view><text>{{item.name}}</text></view>
+        <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
+        <view class='business-price'><text>￥</text>{{item.price}}</view>
+        <view>
+          <image class='add-to-cart' src='../../icon/iconCart1.png' catchtap='addToCart'></image>  
         </view>
-        <view class='business-desc business-desc-list'>
-          <view><text>{{item.name}}</text></view>
-          <view class='business-promotion' wx:if='{{item.promotion}}'>促销</view>
-          <view class='business-price'><text>￥</text>{{item.price}}</view>
-        </view>
-      </navigator> 
+      </view> 
     </view>
     <view class='businessBox' wx:for="{{iceCream}}" wx:key='id'>
       <navigator url='../details/details'>

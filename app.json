@@ -11,7 +11,8 @@
     "pages/addAddress/addAddress",
     "pages/changeAddress/changeAddress",
     "pages/bindPhoneNumber/bindPhoneNumber",
-    "pages/collection/collection"
+    "pages/collection/collection",
+    "pages/payment/payment"
   ],
   "window": {
     "backgroundTextStyle": "light",

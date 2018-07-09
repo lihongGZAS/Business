@@ -7,29 +7,29 @@
       <view bindtap='goToList'><text class='go-to-add-adderss'>马上去选几件中意的商品</text></view>
     </view>
     <scroll-view wx:else class='cart-list-box'>
-      <!-- 购物车清单  -->
+      <!-- 购物车商品列表  -->
       <checkbox-group bindchange="checkboxChange">
-          <label class="weui-cell weui-check__label goods-list-box" wx:for="{{cartAry}}" wx:key="value">
-              <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
-              <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                  <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
-                  <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
-              </view>
-              <view class="weui-cell__bd">
-                <view class='goods-images-box'><image src='{{item.imgUrl}}'></image></view>
-                <view class='goods-desc-box'>
-                  <view class='goods-name-text'>{{item.name}}</view>
-                  <view class='goods-price-number'>
-                    <view class='goods-price-style'>￥<text>{{item.price}}</text></view>
-                    <view class='goods-number-style'>
-                      <text class='reduce-goods-num' data-index='{{index}}' catchtap='reduceNum'>-</text>
-                      <text class='now-goods-num'>{{item.goodsNum}}</text>
-                      <text class='add-goods-num' data-index='{{index}}' catchtap='addNum'>+</text>
-                    </view>
-                  </view>
+        <label class="weui-cell weui-check__label goods-list-box" wx:for="{{cartAry}}" wx:key="value">
+          <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+          <view class="weui-cell__hd weui-check__hd_in-checkbox">
+            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+            <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+          </view>
+          <view class="weui-cell__bd">
+            <view class='goods-images-box'><image src='{{item.imgUrl}}'></image></view>
+            <view class='goods-desc-box'>
+              <view class='goods-name-text'>{{item.name}}</view>
+              <view class='goods-price-number'>
+                <view class='goods-price-style'>￥<text>{{item.price}}</text></view>
+                <view class='goods-number-style'>
+                  <text class='reduce-goods-num' data-index='{{index}}' catchtap='reduceNum'>-</text>
+                  <text class='now-goods-num'>{{item.goodsNum}}</text>
+                  <text class='add-goods-num' data-index='{{index}}' catchtap='addNum'>+</text>
                 </view>
               </view>
-          </label>
+            </view>
+          </view>
+        </label>
       </checkbox-group>
     </scroll-view>  
     <view class='tianchong'></view>
@@ -37,17 +37,17 @@
       <view class='jiesuan-box'>
         <view class='checkbox-group-box'>
           <checkbox-group bindchange="checkAllChange">
-            <label class="weui-cell weui-check__label checkbox-group-label" wx:for="{{checkboxItems}}" wx:key="value">
-              <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+            <label class="weui-cell weui-check__label checkbox-group-label">
+              <checkbox class="weui-check" checked="{{checkAllBoolean}}"/>
               <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                <icon class="weui-icon-checkbox_circle checkbox-icon-list" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
-                <icon class="weui-icon-checkbox_success checkbox-icon-list" type="success" size="23" wx:if="{{item.checked}}"  color='red'></icon>
+                <icon class="weui-icon-checkbox_circle checkbox-icon-list" type="circle" size="23" wx:if="{{!checkAllBoolean}}"></icon>
+                <icon class="weui-icon-checkbox_success checkbox-icon-list" type="success" size="23" wx:if="{{checkAllBoolean}}"  color='red'></icon>
               </view>
             </label>
           </checkbox-group>
         </view>
         <view class='remove-cart-goods'>
-          <image src='../../icon/iconDelate.png' class='remove-goods-icon'></image>
+          <image src='../../icon/iconDelate.png' class='remove-goods-icon' catchtap='removeGoods'></image>
         </view>
         <view class='pay-for-box'>
           <view class='pay-for-list'>合计：<text>￥{{goodsValue}}</text></view>

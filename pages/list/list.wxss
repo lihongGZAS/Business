@@ -20,7 +20,10 @@ page, .business-list {
     color: #AB956D;
     border-color: #AB956D;
 }
-
+.detail-navigator {
+  height: 100%;
+  width: 100%;
+}
 .categroy-right {
   height: 100%;
   width: 76%;
@@ -35,4 +38,11 @@ page, .business-list {
   width: 330rpx;
   height: 180rpx;
   right: 20rpx;
+}
+.business-price {
+  font-size: 32rpx;
+}
+.add-to-cart {
+  width: 64rpx;
+  height: 64rpx;
 }

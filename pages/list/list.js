@@ -1,5 +1,10 @@
-Page({
+/**
+ * create by lh 
+ * date 
+ * modify 2018-07-09
+ */ 
 
+Page({
   /**
    * 页面的初始数据
    */
@@ -117,5 +122,15 @@ Page({
       curIndex: e.target.dataset.index
     })
     console.log(this.data.toViewId);
+  },
+  // 点击购物车图片，将物品加入购物车
+  addToCart: function () {
+    wx.showToast({
+      title: '已将商品加入购物车',
+      icon: 'success',
+      success: function (res) {
+        // 将添加的商品ID放入一个数组中，然后传给后端，当点击跳转到购物车页面时，通过商品ID来获取加入的商品信息list
+      }
+    })
   }
 })

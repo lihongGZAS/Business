@@ -64,20 +64,23 @@
       </image></view>
       <view class='detail-list-text'>客服</view>
     </view>
-    <view class='detail-list'>
+    <view class='detail-list' catchtap='collectedGoods'>
       <view class='detail-list-iconBox'>
-        <image class='detail-list-icon' src='../../icon/iconCollect.png'>
-      </image></view>
+        <image class='detail-list-icon' src='../../icon/iconCollect.png' wx:if="{{!collected}}"></image>
+        <image class='detail-list-icon' src='../../icon/iconCollect1.png' wx:if="{{collected}}"></image>
+      </view>
       <view class='detail-list-text'>收藏</view>
     </view>
-    <view class='detail-list'>
+    <view class='detail-list' catchtap='goToCart'>
       <view class='detail-list-iconBox'>
         <image class='detail-list-icon' src='../../icon/iconCart.png'>
       </image></view>
       <view class='detail-list-text'>购物车</view>
     </view>
-    <view class='detail-list detail-list-text0 detail-list-diff'>立即购买</view>
-    <view class='detail-list detail-list-text1 detail-list-diff'>加入购物车</view>
+    <view class='detail-list detail-list-text0 detail-list-diff'>
+      <navigator url='../payment/payment'>立即购买</navigator>
+    </view>
+    <view class='detail-list detail-list-text1 detail-list-diff' catchtap='addToCart'>加入购物车</view>
   </view>
 </view>
 <view class='loading-data-box' wx:if='{{businessData.length===0}}'>
