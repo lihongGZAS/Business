@@ -81,5 +81,5 @@ Page({
         data: e.detail.userInfo.nickName
       })
     }
-  }
+  },
 })

@@ -12,7 +12,8 @@
     "pages/changeAddress/changeAddress",
     "pages/bindPhoneNumber/bindPhoneNumber",
     "pages/collection/collection",
-    "pages/payment/payment"
+    "pages/payment/payment",
+    "pages/indent/indent"
   ],
   "window": {
     "backgroundTextStyle": "light",

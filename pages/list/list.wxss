@@ -3,6 +3,7 @@ page, .business-list {
   height: 100%;
   overflow: hidden;
 }
+/* 左侧商品菜单列表  */
 .categroy-left {
   height: 100%;
   width: 24%;
@@ -20,15 +21,18 @@ page, .business-list {
     color: #AB956D;
     border-color: #AB956D;
 }
-.detail-navigator {
-  height: 100%;
-  width: 100%;
-}
+/* end  */
+
+/* 右侧分类商品详情  */
 .categroy-right {
   height: 100%;
   width: 76%;
   float: right;
   overflow-y: scroll;
+}
+.detail-navigator {
+  height: 100%;
+  width: 100%;
 }
 .business-pic-list {
   height: 180rpx;
@@ -46,3 +50,4 @@ page, .business-list {
   width: 64rpx;
   height: 64rpx;
 }
+/* end  */

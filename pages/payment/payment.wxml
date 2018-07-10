@@ -2,13 +2,87 @@
 <view class='page'>
   <view class='page_hd'>
     <view class='user-address-detail'>
-      <view class='my-address'>
+      <view class='not-found-address' wx:if="{{userInfo===''}}">
         <image class='user-recive-address' src='../../icon/iconSHAddress.png'></image>
         <text>你还没有收货地址</text><text class='add-person-address'>马上添加</text>
+      </view>
+      <view class='your-address' wx:else>
+        <view class="weui-cells weui-cells_after-title">
+          <navigator class="weui-cell weui-cell_access" hover-class="weui-cell_active" url="../personAddress/personAddress">
+            <view class="weui-cell__bd">
+              <view class='user-name-phoneNum'>
+                <image class='my-address-icon' src='../../icon/iconAddress.png'></image>
+                <text class='user-name-text'>{{userInfo.name}}</text>
+                <text class='user-phoneNum-text'>{{userInfo.phoneNum}}</text>
+              </view>
+              <view class='user-address-text'>{{userInfo.address}}</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+          </navigator>
+        </view>
       </view>
     </view>
   </view>
   <view class='page_bd'>
-    <text>选购的商品信息</text>
+    <scroll-view scroll-y>
+      <view class='goods-info-list'>
+        <view class='businessBox' wx:for="{{iceCream}}" wx:key='id'>
+          <view class='business-pic business-pic-list'>
+            <navigator class='detail-navigator' url='../details/details'>
+              <image src='{{item.imgUrl}}'></image>
+            </navigator>
+          </view>
+          <view class='business-desc business-desc-list'>
+            <view><text>{{item.name}}</text></view>
+            <view class='business-price business-price-number'>
+              <text class='business-price-icon'>￥</text>
+              <text class='business-price-text'>{{item.price}}</text>
+              <text class='business-numbers-text'>×{{item.numbers}}</text>
+            </view>
+          </view> 
+        </view>
+      </view>
+      <view>
+        <view class="weui-cells__title">备注</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入备注" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+      </view>
+      <view class='goods-count'>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">商品总额</view>
+                <view class="weui-cell__ft">￥{{totalMoney}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">活动优惠</view>
+                <view class="weui-cell__ft">-￥{{scle}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">优惠券</view>
+                <view class="weui-cell__ft">-￥{{scle}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">运费</view>
+                <view class="weui-cell__ft">+￥{{scle}}</view>
+            </view>
+            <view class="weui-cell ">
+                <view class="weui-cell__bd">实付款：<text>￥{{totalMoney}}</text></view>
+            </view>
+        </view>  
+      </view>
+    </scroll-view>
+  </view>
+  <view class='page-footer'>
+    <view class='page-footer-box payment-info-text'>
+      <view class='payment-info-style total-money'>合计：<text>￥{{totalMoney}}</text></view>
+      <view class='payment-info-style payment-freight'>运费（<text>￥{{freight}}</text>）</view>
+    </view>
+    <view class='page-footer-box submit-btn'>提交订单</view>    
   </view>
 </view>

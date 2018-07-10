@@ -1,0 +1,74 @@
+/* pages/indent/indent.wxss */
+/* 订单列表  */
+.paymentBox {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.goods-info-list {
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.goods-count {
+  margin-top: 10rpx;
+}
+.payment-numbers {
+  height: 80rpx;
+  position: relative;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.payment-paymentNum {
+  position: absolute;
+  left: 20rpx;
+  color: #ccc;
+}
+.payment-paymentStatus {
+  position: absolute;
+  right: 30rpx;
+  color: red;
+}
+.business-price-number {
+  margin-top: 60rpx;
+}
+.business-price-icon{
+  font-size: 28rpx;
+  color: red;
+}
+.business-price-text {
+  color:  red;
+  font-size: 36rpx;
+}
+.business-numbers-text {
+  font-size: 26rpx;
+  color: #8a8a8a;
+}
+.payment-btn {
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: red;
+  border: 1px solid red;
+  display: inline-block;
+  font-size: 30rpx;
+  padding: 0 10rpx;
+  margin-right: 20rpx;
+}
+.need-pay-for {
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.need-pay-for-text {
+  font-size: 26rpx;
+  text-align: right;
+}
+.need-pay-for-text text {
+  font-size: 38rpx;
+  color: red;
+}
+.payment-btn-box {
+  padding: 20rpx;
+}
+/* end  */

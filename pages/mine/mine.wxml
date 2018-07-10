@@ -27,39 +27,42 @@
         <open-data type="userNickName"></open-data>
       </view>
     </view>
-    <!-- <view class='loading-data-box' wx:else>
-      <view class="weui-loadmore">
-          <view class="weui-loading"></view>
-          <view class="weui-loadmore__tips">loading...</view>
-      </view>
-    </view> -->
   </view>
   <view class='page_bd'>
     <view class='indent-box'>
       <view class='detail-footer'>
         <view class='detail-list'>
-          <view class='detail-list-iconBox'>
-            <image class='detail-list-icon' src='../../icon/iconPay.png'>
-          </image></view>
-          <view class='detail-list-text'>待支付</view>
+          <navigator class='go-indent-page' url='../indent/indent'>
+            <view class='detail-list-iconBox'>
+              <image class='detail-list-icon' src='../../icon/iconPay.png'></image>
+            </view>
+            <view class='detail-list-text'>待支付</view>
+          </navigator>
+          
         </view>
         <view class='detail-list'>
-          <view class='detail-list-iconBox'>
-            <image class='detail-list-icon' src='../../icon/iconShouH.png'>
-          </image></view>
-          <view class='detail-list-text'>待收货</view>
+          <navigator class='go-indent-page' url='../indent/indent'>
+            <view class='detail-list-iconBox'>
+              <image class='detail-list-icon' src='../../icon/iconShouH.png'></image>
+            </view>
+            <view class='detail-list-text'>待收货</view>
+          </navigator>
         </view>
         <view class='detail-list'>
-          <view class='detail-list-iconBox'>
-            <image class='detail-list-icon' src='../../icon/iconFinshed.png'>
-          </image></view>
-          <view class='detail-list-text'>已完成</view>
+          <navigator class='go-indent-page' url='../indent/indent'>
+            <view class='detail-list-iconBox'>
+              <image class='detail-list-icon' src='../../icon/iconFinshed.png'></image>
+            </view>
+            <view class='detail-list-text'>已完成</view>
+          </navigator>
         </view>
         <view class='detail-list'>
-          <view class='detail-list-iconBox'>
-            <image class='detail-list-icon' src='../../icon/iconAllIndent.png'>
-          </image></view>
-          <view class='detail-list-text'>全部订单</view>
+          <navigator class='go-indent-page' url='../indent/indent'>
+            <view class='detail-list-iconBox'>
+              <image class='detail-list-icon' src='../../icon/iconAllIndent.png'></image>
+            </view>
+            <view class='detail-list-text'>全部订单</view>
+          </navigator> 
         </view>
       </view>
     </view>
